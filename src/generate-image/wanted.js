@@ -36,7 +36,7 @@ module.exports = class Generate {
    const canvas = Canvas.createCanvas(1024, 1024);
    const ctx = canvas.getContext("2d");
    /* BACKGROUND */
-   let background = await Canvas.loadImage(this.backgroundImage);
+   let background = await Canvas.loadImage(this.background);
    ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
    /* BOX */
    ctx.fillRect(341,0,1024,341);
