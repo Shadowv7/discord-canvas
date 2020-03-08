@@ -39,13 +39,13 @@ module.exports = class Generate {
    let background = await Canvas.loadImage(this.background);
    ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
    /* BOX */
-   ctx.fillRect(341,0,1024,341);
-   ctx.fillStyle = this.colorBox
-   ctx.globalAlpha = this.opacityBox
+   ctx.fillRect(canvas.width/2,canvas.height/2,1024,341);
+   ctx.fillStyle = this.colorBox;
+   ctx.globalAlpha = this.opacityBox;
    /* TEXT */
    ctx.fillStyle = this.colorText
-   ctx.font = applyText(canvas, this.text, 70);
-   ctx.fillText(this.text,900,300)
+   ctx.font = applyText(canvas, this.text, 100);
+   ctx.fillText(this.text,canvas.width/2,canvas.height/2)
    return canvas;
  }
 }
