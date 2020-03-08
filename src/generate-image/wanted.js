@@ -32,14 +32,17 @@ module.exports = class Generate {
      return this;
   }
   async toAttachment() {
+   /* CREATE CANVAS */
    const canvas = Canvas.createCanvas(1024, 1024);
    const ctx = canvas.getContext("2d");
-   const text = this.text;
+   /* BACKGROUND */
    let background = await Canvas.loadImage(this.backgroundImage);
    ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
+   /* BOX */
    ctx.fillRect(341,0,1024,341);
    ctx.fillStyle = this.colorBox
    ctx.globalAlpha = this.opacityBox
+   ctx.fillText(this.text,canvas.width,canvas.height)
    return canvas;
  }
 }
