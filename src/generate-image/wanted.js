@@ -42,6 +42,8 @@ module.exports = class Generate {
    ctx.fillRect(341,0,1024,341);
    ctx.fillStyle = this.colorBox
    ctx.globalAlpha = this.opacityBox
+   /* TEXT */
+   ctx.font = applyText(canvas, this.text, 70);
    ctx.fillText(this.text,canvas.width,canvas.height)
    return canvas;
  }
