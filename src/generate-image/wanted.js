@@ -11,7 +11,7 @@ module.exports = class Generate {
     this.colorText = "#ff0000";
     this.colorBox = "#fff";
     /* OPACITY */
-    this.opacityBow = "0.4";
+    this.opacityBox = "0.4";
    }
   setText(value) {
   this.text = value;
