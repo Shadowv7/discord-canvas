@@ -45,7 +45,7 @@ module.exports = class Generate {
    /* TEXT */
    ctx.fillStyle = this.colorText
    ctx.font = applyText(canvas, this.text, 70);
-   ctx.fillText(this.text,canvas.width,canvas.height)
+   ctx.fillText(this.text,900,300)
    return canvas;
  }
 }
