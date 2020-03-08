@@ -29,7 +29,7 @@ module.exports = class Generate {
    const text = this.text;
    let background = await Canvas.loadImage(this.backgroundImage);
    ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
-
-   
+   ctx.fillRect(341,0,1024,341);
+      
  }
 }
